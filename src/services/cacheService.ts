@@ -1,4 +1,12 @@
-import { CacheItem, CACHE_DURATION } from '@/types';
+// Definir constantes localmente para evitar problemas de imports
+const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 horas en milisegundos
+
+// Interfaz para elementos del cache
+interface CacheItem<T = any> {
+  data: T;
+  timestamp: number;
+  expiresAt: number;
+}
 
 /**
  * Servicio para manejar el cache en localStorage
