@@ -1,0 +1,108 @@
+.home-view {
+  padding: var(--spacing-md) 0;
+}
+
+.home-view__loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  gap: var(--spacing-md);
+  color: var(--color-text-secondary);
+}
+
+.home-view__error {
+  text-align: center;
+  color: var(--color-error);
+  background-color: var(--color-background);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.home-view__retry-button {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  margin: var(--spacing-md) 0;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.home-view__retry-button:hover {
+  background-color: var(--color-primary-dark, #0056b3);
+}
+
+.home-view__error-details {
+  margin-top: var(--spacing-md);
+  text-align: left;
+}
+
+.home-view__error-details summary {
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.home-view__error-details ul {
+  margin: var(--spacing-sm) 0;
+  padding-left: var(--spacing-md);
+}
+
+.home-view__error-details li {
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text-secondary);
+}
+
+.home-view__no-results {
+  text-align: center;
+  color: var(--color-text-secondary);
+  background-color: var(--color-background);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.home-view__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-md);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .home-view__grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: var(--spacing-md);
+  }
+}
+
+@media (max-width: 768px) {
+  .home-view {
+    padding: var(--spacing-sm) 0;
+  }
+
+  .home-view__grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--spacing-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .home-view__grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  .home-view__loading,
+  .home-view__error,
+  .home-view__no-results {
+    padding: var(--spacing-lg);
+  }
+}
