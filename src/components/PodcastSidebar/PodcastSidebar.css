@@ -1,0 +1,86 @@
+.podcast-sidebar {
+  background-color: var(--color-background);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: var(--border-width) solid var(--color-border);
+  height: fit-content;
+  position: sticky;
+  top: calc(var(--header-height) + var(--spacing-md));
+}
+
+.podcast-sidebar__image-container {
+  margin-bottom: var(--spacing-lg);
+}
+
+.podcast-sidebar__image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-md);
+  transition: transform var(--transition-fast);
+}
+
+.podcast-sidebar__image:hover {
+  transform: scale(1.02);
+}
+
+.podcast-sidebar__info {
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.podcast-sidebar__title {
+  display: block;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  margin-bottom: var(--spacing-sm);
+  transition: color var(--transition-fast);
+}
+
+.podcast-sidebar__title:hover {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.podcast-sidebar__artist {
+  display: block;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.podcast-sidebar__artist:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.podcast-sidebar__description h4 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text-primary);
+}
+
+.podcast-sidebar__description p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .podcast-sidebar {
+    position: static;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .podcast-sidebar__image-container {
+    max-width: 200px;
+    margin: 0 auto var(--spacing-lg) auto;
+  }
+}
